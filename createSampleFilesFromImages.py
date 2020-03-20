@@ -7,6 +7,7 @@ from os.path import isfile, join
 import time
 from datetime import datetime
 import numpy as np
+import util
 
 blankHash = "bf619eac0cdf3f68d496ea9344137e8b"
 
