@@ -86,7 +86,7 @@ def drawManualPlotForNomalized():
     plt.subplots_adjust(left=0.1, bottom =0.21, right=0.94, top=0.95, wspace=0.2, hspace=0)
 
    
-    pngFile= WorkingDir + TitleString + '_4_Emp_Non_Normalized.png'
+    pngFile= WorkingDir + TitleString + '_4_Emp_Normalized.png'
     plt.savefig(pngFile, bbox_inches="tight", pad_inches=2,transparent=True)
     plt.show()
 
@@ -164,12 +164,13 @@ def drawManualPlotForNonNomalized():
 #=====================
 #   main()
 #---------------------
-def Main():
+def main():
 
-     
+   print("drawManualPlotForNomalized")
    drawManualPlotForNomalized()
 
-   drawManualPlotForNonNomalized
+   print("drawManualPlotForNonNomalized")
+   drawManualPlotForNonNomalized()
    
     
     
@@ -179,8 +180,8 @@ if __name__ == '__main__':
     print ("main called")
    
    
-    WorkingDir = "C:/Research/Results_Jan_2019/" 
+    WorkingDir = "C:/Research/IFIP/matplotResult/"
     
     
-    Main()
+    main()
     

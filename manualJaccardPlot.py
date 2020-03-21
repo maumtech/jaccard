@@ -255,10 +255,7 @@ def Main():
 if __name__ == '__main__':
     
     print ("main called")
-   
-   
-    WorkingDir = "C:/Research/Results_Jan_2019/" 
-    
+    WorkingDir = "C:/Research/IFIP/matplotResult/"
     
     Main()
     
