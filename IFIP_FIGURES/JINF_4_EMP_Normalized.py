@@ -77,6 +77,7 @@ def set_tickFontSize(ax1, size):
         tick.label.set_fontsize(size)
 
 def drawPicture(TitleString, ax1, xLabelPrint,  yLabelPrint):
+    global angle
     labelFont = {'family': 'sans-serif',
             'color': 'black',
             'weight': 'normal',
@@ -88,7 +89,7 @@ def drawPicture(TitleString, ax1, xLabelPrint,  yLabelPrint):
              'size': 10,
              }
 
-    angle = 44
+
     set_rotation(ax1, angle)
     set_tickFontSize(ax1, 5)
     ax1.set_title(TitleString,  fontdict=titleFont)
@@ -294,6 +295,8 @@ def setMarkerValues():
 
 def draw_4_JINF():
     global WorkingDir
+    global angle # set it before drawing
+    angle = 90
     #fig = plt.figure(figsize=(4, 6))
 
     plt.style.use('grayscale')
@@ -315,7 +318,8 @@ def draw_4_JINF():
     yLabel = False
     draw_Terry_JINF(axes[1][1], xLabel, yLabel)
 
-    TitleString = "JINF_4_EMP"
+
+    TitleString = "JINF_4_EMP" + "_" + str(angle)
     picFile = WorkingDir + TitleString + '.' + fileType
     # plt.savefig(picFile, bbox_inches="tight", pad_inches=2, dpi=600)
     fig.savefig(picFile, bbox_inches="tight", pad_inches=2, dpi=600, orientation='landscape')
