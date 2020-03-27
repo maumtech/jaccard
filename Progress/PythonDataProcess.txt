@@ -1,0 +1,28 @@
+March 2020
+Initially MySql was used.
+It has speed issue and DB was corrupted.
+Everything re started with Python.
+First I created 'createSampleFiles.py' which I generated sample files
+from thw source where OS sectors are removed.
+
+Prof Jones wants to create samples from raw image file
+by selecting random sectors upto given percent ( 5% for example) while discarding blank sectors.
+so I  created 'createSampleFilesFromImages.py'
+There are two versions of output, both do not contain blank sectors.
+1. sample which contains OS sectors
+2. sample which does not contain OS sectors
+
+To DO
+First md5hash.txt of each OS has the following format
+     //System.out.println(FileMD5 + "\t" + lineVariables[0] + "\t" + count);
+  <FileMD5  sectorHash  offset> separated by tab
+Need to create a OS.csv file of format
+  <sectorHash,offset>  so we need only  ( lineVariables[0] + "\t" + count)
+  which is second and third column.
+
+Files under Md5Csv do not contain OS sectors and Blank Sectors.
+Files under G:\M57\Md5CsvFull do not contain OS sectors and Blank Sectors.
+
+Sample will be created from Md5CsvFull.
+But each sample will be compared with files under Md5Csv.
+
