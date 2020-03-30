@@ -14,8 +14,12 @@ There are two versions of output, both do not contain blank sectors.
 
 To DO
 First, md5hash.txt of each OS has the following format :: C:/WinImage
-     //System.out.println(FileMD5 + "\t" + lineVariables[0] + "\t" + count);
-  <FileMD5  sectorHash  offset> separated by tab
+
+
+d13e1de701f7234b1577fad1c3928edb  C:\Users\Myeong\Documents\Virtual Machines\Windows Vista bz 32\vista.img offset 0-511
+bf619eac0cdf3f68d496ea9344137e8b  C:\Users\Myeong\Documents\Virtual Machines\Windows Vista bz 32\vista.img offset 512-1023
+bf619eac0cdf3f68d496ea9344137e8b  C:\Users\Myeong\Documents\Virtual Machines\Windows Vista bz 32\vista.img offset 1024-1535
+
 Need to create a OS.csv file of format
   <sectorHash,offset>  so we need only  ( lineVariables[0] + "\t" + count)
   which is second and third column.
